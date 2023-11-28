@@ -1,2 +1,2 @@
-#!/usr/bin/phyton3
-phyton3 -m "$PYCODE"
+#!/bin/bash
+python3 -c "$PYCODE"
