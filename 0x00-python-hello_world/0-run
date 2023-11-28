@@ -13,4 +13,4 @@ if [ ! -f "$PYFILE" ]; then
 fi
 
 # Run the Python script
-python3 "$PYFILE"
+python3 ./$PYFILE
