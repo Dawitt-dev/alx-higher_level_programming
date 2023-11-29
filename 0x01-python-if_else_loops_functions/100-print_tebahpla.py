@@ -4,4 +4,4 @@ for ascii_value in range(ord('z'), ord('a') - 1, -1):
         char = chr(ascii_value) 
     else:
         char = chr(ascii_value - 32)
-    print(char, end='')
+    print("{}".format(char), end='')
