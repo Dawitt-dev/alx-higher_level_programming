@@ -39,6 +39,6 @@ int is_palindrome(listint_t **head)
 		prev = prev->next;
 	}
 
-	return 1;
+	return (1);
 }
 
