@@ -11,4 +11,6 @@ class Square:
 
         pass
 
+# 'print(__import__("1-square").__doc__)', prints the module docstring.
 # 'print(__import__("0-square").Square.__doc__)', prints the class docstring.
+# 'print(__import__("1-square").Square.__init__.__doc__)', prints the method.
