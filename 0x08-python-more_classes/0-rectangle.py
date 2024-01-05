@@ -2,4 +2,7 @@
 
 
 class Rectangle:
-    pass
+    """ A class that defined a rectangle."""
+
+    def __int__(self):
+        pass
