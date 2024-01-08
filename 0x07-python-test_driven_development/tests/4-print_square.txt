@@ -1,0 +1,30 @@
+Importing the function print_square.
+>>> print_square = __import__('4-print_square').print_square
+
+# Test 1: Passing an integer as size.
+>>> print_square(4)
+####
+####
+####
+####
+
+# Test 2: Passing 0 as size.
+>>> print_square(0)
+
+# Test 3: Passing non-integers as size.
+>>> print_square('4')
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
+
+# Test 4: Passing a negative number as size.
+>>> print_square(-2)
+Traceback (most recent call last):
+    ...
+ValueError: size must be >= 0
+
+# Test 5: Valid case with size 3.
+>>> print_square(3)
+###
+###
+###

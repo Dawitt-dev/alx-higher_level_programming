@@ -1,0 +1,57 @@
+# The ``7-text_indentation`` module
+============================================
+How to use 7-text_indentation.py
+============================================
+
+This library has one function called ``text_indentation()``
+
+``text_indentation()`` prints a text with 2 new lines after each of these
+characters: ., ? and :
+
+Importing the function text_indentation.
+    >>> text_indentation = __import__('7-text_indentation').text_indentation
+
+Passing the given text with a period.
+    >>> text_indentation("This is a test. Another sentence.")
+    This is a test.
+    <BLANKLINE>
+    Another sentence.
+    <BLANKLINE>
+
+Passing a text with a question mark.
+    >>> text_indentation("How are you? What's up?")
+    How are you?
+    <BLANKLINE>
+    What's up?
+    <BLANKLINE>
+
+Passing a text with a colon.
+    >>> text_indentation("First item: complete. Second item: pending.")
+    First item: complete.
+    <BLANKLINE>
+    Second item: pending.
+    <BLANKLINE>
+
+Passing an empty string as text.
+    >>> text_indentation("")
+
+Passing a text with space at the beginning.
+    >>> text_indentation("        Hello World")
+    Hello World
+
+Printing a word with spaces around it.
+    >>> text_indentation("    Python    ")
+    Python
+
+Printing a word with a special character at the end.
+    >>> text_indentation("    GPT-3.    ")
+    GPT-3.
+    <BLANKLINE>
+
+Passing a text with space between words and a special character at end.
+    >>> text_indentation("How about now?    Any suggestions?")
+    How about now?
+    <BLANKLINE>
+    Any suggestions?
+    <BLANKLINE>
+

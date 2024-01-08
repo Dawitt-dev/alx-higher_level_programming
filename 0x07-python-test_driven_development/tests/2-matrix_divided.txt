@@ -1,0 +1,45 @@
+Importing the function matrix_divided.
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+# 1. Basic division by a positive integer
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+>>> matrix_divided(matrix, 2)
+[[0.5, 1.0, 1.5], [2.0, 2.5, 3.0]]
+
+# 2. Basic division by a negative float
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+>>> matrix_divided(matrix, -1.5)
+[[-0.67, -1.33, -2.0], [-2.67, -3.33, -4.0]]
+
+# 3. Division by 1, no change in the matrix
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+>>> matrix_divided(matrix, 1)
+[[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]]
+
+# 4. Division by a boolean, should raise a ZeroDivisionError
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+>>> matrix_divided(matrix, True)
+Traceback (most recent call last):
+    ...
+ZeroDivisionError: division by zero
+
+# 5. Division by a string, should raise a TypeError
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+>>> matrix_divided(matrix, "2")
+Traceback (most recent call last):
+    ...
+TypeError: div must be a number
+
+# 6. Division by None, should raise a TypeError
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+>>> matrix_divided(matrix, None)
+Traceback (most recent call last):
+    ...
+TypeError: div must be a number
+
+# 7. Division with unequal row sizes, should raise a TypeError
+>>> matrix = [[1, 2, 3], [4, 5, 6, 7]]
+>>> matrix_divided(matrix, 2)
+Traceback (most recent call last):
+    ...
+TypeError: Each row of the matrix must have the same size
