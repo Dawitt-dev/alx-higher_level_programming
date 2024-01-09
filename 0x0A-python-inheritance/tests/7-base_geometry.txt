@@ -1,0 +1,77 @@
+# basegeometry_tests.txt
+
+# Import the BaseGeometry class
+>>> from your_module_name import BaseGeometry
+
+# Test 1: Create an instance of BaseGeometry and call area method (should raise Exception)
+>>> geom_instance = BaseGeometry()
+>>> geom_instance.area()
+Traceback (most recent call last):
+    ...
+Exception: area() is not implemented.
+
+# Test 2: Create an instance of BaseGeometry and call integer_validator with valid input
+>>> geom_instance.integer_validator("side_length", 5)
+
+# Test 3: Create an instance of BaseGeometry and call integer_validator with non-integer input (should raise TypeError)
+>>> geom_instance.integer_validator("side_length", "invalid")
+Traceback (most recent call last):
+    ...
+TypeError: side_length must be an integer
+
+# Test 4: Create an instance of BaseGeometry and call integer_validator with negative input (should raise ValueError)
+>>> geom_instance.integer_validator("side_length", -3)
+Traceback (most recent call last):
+    ...
+ValueError: side_length must be greater than 0
+
+# Test 5: Create an instance of BaseGeometry and call integer_validator with zero input (should raise ValueError)
+>>> geom_instance.integer_validator("side_length", 0)
+Traceback (most recent call last):
+    ...
+ValueError: side_length must be greater than 0
+
+# Test 6: Create an instance of BaseGeometry and call integer_validator with valid input and different name
+>>> geom_instance.integer_validator("width", 8)
+
+# Test 7: Create a subclass Square inheriting from BaseGeometry and call integer_validator with valid input
+>>> class Square(BaseGeometry):
+...     def __init__(self, side_length):
+...         self.integer_validator("side_length", side_length)
+...         self.side_length = side_length
+...
+>>> square_instance = Square(4)
+
+# Test 8: Create a subclass Square inheriting from BaseGeometry and call integer_validator with non-integer input (should raise TypeError)
+>>> class Square(BaseGeometry):
+...     def __init__(self, side_length):
+...         self.integer_validator("side_length", side_length)
+...         self.side_length = side_length
+...
+>>> square_instance = Square("invalid")
+Traceback (most recent call last):
+    ...
+TypeError: side_length must be an integer
+
+# Test 9: Create a subclass Square inheriting from BaseGeometry and call integer_validator with negative input (should raise ValueError)
+>>> class Square(BaseGeometry):
+...     def __init__(self, side_length):
+...         self.integer_validator("side_length", side_length)
+...         self.side_length = side_length
+...
+>>> square_instance = Square(-3)
+Traceback (most recent call last):
+    ...
+ValueError: side_length must be greater than 0
+
+# Test 10: Create a subclass Square inheriting from BaseGeometry and call area method (should raise Exception)
+>>> class Square(BaseGeometry):
+...     def __init__(self, side_length):
+...         self.integer_validator("side_length", side_length)
+...         self.side_length = side_length
+...
+>>> square_instance = Square(4)
+>>> square_instance.area()
+Traceback (most recent call last):
+    ...
+Exception: area() is not implemented.
