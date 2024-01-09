@@ -9,4 +9,3 @@ class BaseGeometry:
     It can be used as a base class for geometry-related classes.
     """
     pass
-
