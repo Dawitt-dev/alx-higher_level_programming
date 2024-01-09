@@ -1,0 +1,40 @@
+# mylist_tests.txt
+
+# Import the MyList class
+>>> MyList = __import__('1-my_list').MyList
+
+# Test 1: Create an empty MyList and print it (empty list)
+>>> my_empty_list = MyList()
+>>> my_empty_list.print_sorted()
+[]
+
+# Test 2: Create a MyList with unsorted integers and print it
+>>> my_unsorted_list = MyList([3, 1, 4, 1, 5, 9, 2, 6, 5])
+>>> my_unsorted_list.print_sorted()
+[1, 1, 2, 3, 4, 5, 5, 6, 9]
+
+# Test 3: Create a MyList with one element and print it
+>>> my_single_element_list = MyList([42])
+>>> my_single_element_list.print_sorted()
+[42]
+
+# Test 4: Create a MyList with negative integers and print it
+>>> my_negative_list = MyList([-5, -2, -8, -1])
+>>> my_negative_list.print_sorted()
+[-8, -5, -2, -1]
+
+# Test 5: Create a MyList with repeated elements and print it
+>>> my_repeated_list = MyList([7, 3, 7, 2, 2, 7])
+>>> my_repeated_list.print_sorted()
+[2, 2, 3, 7, 7, 7]
+
+# Test 6: Create a MyList with already sorted elements and print it
+>>> my_sorted_list = MyList([1, 2, 3, 4, 5])
+>>> my_sorted_list.print_sorted()
+[1, 2, 3, 4, 5]
+
+# Test 7: Create a MyList with a mix of positive and negative integers and print it
+>>> my_mixed_list = MyList([-3, 5, -1, 7, -2, 4])
+>>> my_mixed_list.print_sorted()
+[-3, -2, -1, 4, 5, 7]
+
