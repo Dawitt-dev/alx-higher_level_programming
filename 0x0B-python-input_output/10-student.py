@@ -34,9 +34,7 @@ class Student:
         if attrs is None:
             return self.__dict__
         new_dict = {}
-        for attr in attrs:
-            try:
-                new_dict[attr] = self.__dict__[item]
-            except Exception:
-                pass
+        for attr,value in self.__dict__.items():
+            if attr in attrs:
+                new_dict[attr] = value
         return new_dict
