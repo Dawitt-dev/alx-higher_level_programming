@@ -2,7 +2,7 @@
 """Defining the class student"""
 
 
-class student:
+class Student:
     """
     Defines students properties.
 
