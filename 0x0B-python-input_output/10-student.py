@@ -34,7 +34,7 @@ class Student:
         if attrs is None:
             return self.__dict__
         new_dict = {}
-        for attr,value in self.__dict__.items():
+        for attr, value in self.__dict__.items():
             if attr in attrs:
                 new_dict[attr] = value
         return new_dict
