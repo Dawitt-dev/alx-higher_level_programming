@@ -117,16 +117,16 @@ class Rectangle(Base):
     def Positive_IntegerValidater(self, value, attribute_name):
         """Checks if values are positive integers or not."""
         if not isinstance(value, int):
-            raise TypeError(f"{attribute_name} must be an integer.")
+            raise TypeError(f"{attribute_name} must be an integer")
         if value <= 0:
-            raise ValueError(f"{attribute_name} must be > 0.")
+            raise ValueError(f"{attribute_name} must be > 0")
 
     def Non_Negative_IntegerValidater(self, value, attribute_name):
         """Checks if values are non negative integers or not."""
         if not isinstance(value, int):
-            raise TypeError(f"{attribute_name} must be an integer.")
+            raise TypeError(f"{attribute_name} must be an integer")
         if value < 0:
-            raise ValueError(f"{attribute_name} must be >= 0.")
+            raise ValueError(f"{attribute_name} must be >= 0")
 
     def area(self):
         """A public object method that calculate the area of the Rectangle.

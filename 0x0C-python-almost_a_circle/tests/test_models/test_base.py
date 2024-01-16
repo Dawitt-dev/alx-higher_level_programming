@@ -105,5 +105,5 @@ class TestBase(unittest.TestCase):
         self.assertNotEqual(r1, created_rectangle)
             
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     unittest.main()
