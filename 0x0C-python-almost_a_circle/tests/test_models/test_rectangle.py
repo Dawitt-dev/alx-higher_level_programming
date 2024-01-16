@@ -26,25 +26,25 @@ class TestRectangleMethods(unittest.TestCase):
     def test_width_height_types(self):
         """ Test for width and height types"""
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
-            Rectangle("Chris", 9)
-            Rectangle('c', 9)
-            Rectangle(True, 8)
+            Rectangle("Dave", 6)
+            Rectangle('L', 9)
+            Rectangle(True, 5)
 
         with self.assertRaisesRegex(TypeError, "height must be an integer"):
-            Rectangle(7, "Breezy")
-            Rectangle(7, 'c')
-            Rectangle(True, 6)
+            Rectangle(2, "wish")
+            Rectangle(4, 'W')
+            Rectangle(True, 8)
 
     def test_width_height_ranges(self):
         """ Test for width and height ranges"""
         with self.assertRaisesRegex(ValueError, "width must be > 0"):
-            Rectangle(-7, 2)
-            Rectangle(0, 1)
-            Rectangle(0, 2)
+            Rectangle(-3, 9)
+            Rectangle(0, 9)
+            Rectangle(0, 3)
 
         with self.assertRaisesRegex(ValueError, "height must be > 0"):
-            Rectangle(6, -5)
-            Rectangle(2, 0)
+            Rectangle(9, -5)
+            Rectangle(8, 0)
             Rectangle(1, 0)
 
     def test_area(self):
