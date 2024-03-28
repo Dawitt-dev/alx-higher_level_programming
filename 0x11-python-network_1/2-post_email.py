@@ -5,12 +5,13 @@
 """
 import urllib.request
 from sys import argv
+import urllib.parse
 
 if __name__ == "__main__":
     url = argv[1]
     val = {'email': argv[2]}
 
-    data = utllib.parse.utlencode(val)
+    data = urllib.parse.urlencode(val)
     data = data.encode('ascii')
     req = urllib.request.Request(url, data)
 
