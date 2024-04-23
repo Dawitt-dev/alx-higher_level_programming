@@ -13,7 +13,7 @@ if (!apiUrl) {
 // Make a GET request to the API endpoint
 request.get(apiUrl, (error, response, body) => {
   if (error) {
-    console.error('Error:', error);
+    console.error(error);
     return;
   }
 
