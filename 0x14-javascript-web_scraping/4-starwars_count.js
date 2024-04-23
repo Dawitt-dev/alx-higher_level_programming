@@ -5,10 +5,10 @@ const request = require('request');
 const apiUrl = process.argv[2];
 
 // check if API URL is provided
-if (!apiUrl) {
-  console.error('Please provide the API URL');
-  process.exit(1);
-}
+//if (!apiUrl) {
+  //console.error('Please provide the API URL');
+  //process.exit(1);
+//}
 
 // Make a GET request to the API endpoint
 request.get(apiUrl, (error, response, body) => {
