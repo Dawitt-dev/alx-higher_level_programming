@@ -20,7 +20,7 @@ if (!stringContent) {
 }
 
 // write the content on file
-fs.writeFile(filePath, stringContent, err => {
+fs.writeFile(filePath, stringContent, 'urf8', err => {
   if (err) {
     console.error(err);
   }
