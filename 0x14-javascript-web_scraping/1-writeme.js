@@ -13,11 +13,6 @@ if (!filePath) {
   process.exit(1);
 }
 
-// check if string to be written provided
-if (!stringContent) {
-  console.error('No string provided');
-  process.exit(1);
-}
 
 // write the content on file
 fs.writeFile(filePath, stringContent, 'utf8', err => {
