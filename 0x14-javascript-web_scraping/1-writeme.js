@@ -13,7 +13,6 @@ if (!filePath) {
   process.exit(1);
 }
 
-
 // write the content on file
 fs.writeFile(filePath, stringContent, 'utf8', err => {
   if (err) {
