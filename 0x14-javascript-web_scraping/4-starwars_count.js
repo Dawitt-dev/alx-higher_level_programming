@@ -4,11 +4,14 @@ const request = require('request');
 // Get the API URL from the command line arguments
 const apiUrl = process.argv[2];
 
+// charcter ID
+const characterId = '18';
+
 // check if API URL is provided
-//if (!apiUrl) {
-  //console.error('Please provide the API URL');
-  //process.exit(1);
-//}
+if (!apiUrl) {
+  console.error('Please provide the API URL');
+  process.exit(1);
+}
 
 // Make a GET request to the API endpoint
 request.get(apiUrl, (error, response, body) => {
@@ -22,7 +25,7 @@ request.get(apiUrl, (error, response, body) => {
 
   // Count the number of movies where "wedge Antilles"
   const count = films.filter(film =>
-    film.characters.includes('https://swapi-api.alx-tools.com/api/people/18/')
+    film.characters.some(character => character.endsWith(`/${characterId}/`))
   ).length;
 
   // print the nuber of movies
